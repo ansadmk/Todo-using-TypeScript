@@ -1,0 +1,11 @@
+file:///home/luffy/Bridgeon/My_Bridgeon_Dairy/3rd%20month/week2/todo%20using%20typescript/src/main.tsx {"mtime":1693889795020,"ctime":1693889795020,"size":236,"etag":"3b5kook8l7j","orphaned":false,"typeId":""}
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App.tsx'
+
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+)

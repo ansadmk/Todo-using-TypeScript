@@ -1,0 +1,17 @@
+file:///home/luffy/Bridgeon/My_Bridgeon_Dairy/3rd%20month/week2/todo%20using%20typescript/src/App.tsx {"mtime":1693889795016,"ctime":1693889795016,"size":905,"etag":"3b5kook8ht6","orphaned":false,"typeId":""}
+import { useState } from 'react'
+
+interface item{
+  id:
+}
+function App() {
+  const [count, setCount] = useState([])
+
+  return (
+    <>
+      
+    </>
+  )
+}
+
+export default App
