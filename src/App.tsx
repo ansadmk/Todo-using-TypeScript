@@ -1,39 +1,35 @@
 import React, { FC, useState } from "react";
+import Todo from "./todo.tsx";
 
 interface type {
   id: Number;
   content: String;
-  edit: boolean;
 }
+
 function App() {
   const [state, setState] = useState<type[]>([]);
 
-  const add= (e:any) => {
+  const add = (e: any) => {
     e.preventDefault();
     setState((states: any) => [
       ...states,
-      { id: Math.random(), content: e.target.content.value, edit: false },
+      { id: Date.now(), content: e.target.content.value },
     ]);
-    e.target.reset()
   };
-  const deletetodo = (i: Number) => {
-    const filtprod: any = state.filter((a: Object, index: Number) => {
-      return index != i;
-    });
-    setState(filtprod);
-  };
+
   return (
-    <>
+    <div className="text-center">
       <form action="" onSubmit={add}>
         <input type="text" id="content" />
         <input type="submit" value="add" />
       </form>
+
       {state.map((v, i) => (
         <h1>
-          {v.content} <button onClick={() => deletetodo(i)}>delete</button>
+          <Todo state={state} setState={setState} i={i} v={v} />
         </h1>
       ))}
-    </>
+    </div>
   );
 }
 
