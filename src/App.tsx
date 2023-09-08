@@ -18,10 +18,10 @@ function App() {
   };
 
   return (
-    <div className="text-center">
-      <form action="" onSubmit={add}>
+    <div className="text-center mt-5">
+      <form action="" onSubmit={add} >
         <input type="text" id="content" />
-        <input type="submit" value="add" />
+        <input type="submit" value="add" className="ms-2" />
       </form>
 
       {state.map((v, i) => (

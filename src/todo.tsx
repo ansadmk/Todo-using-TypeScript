@@ -34,10 +34,10 @@ const todolist = (params: props) => {
   };
   return (
     <>
-      <form onSubmit={(e) => edittodo(e, i)}>
+      <form className="mb-4" onSubmit={(e) => edittodo(e, i)}>
         {edit ? v.content : <input type="text" id="val" />}{" "}
-      </form>
-      <button onClick={() => setEdit(s=>!s)}>edit</button>
+      </form >
+      <button onClick={() => setEdit(s=>!s)} className="me-4">edit</button>
       <button onClick={() => deletetodo(i)}>delete</button>
     </>
   );
